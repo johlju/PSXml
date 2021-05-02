@@ -65,5 +65,5 @@ Pester:
   - tests/QA
   - tests/Unit
   Tag:
-  CodeCoverageThreshold: 30
+  CodeCoverageThreshold: 60
 
