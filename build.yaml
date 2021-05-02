@@ -1,0 +1,69 @@
+---
+####################################################
+#          ModuleBuilder Configuration             #
+####################################################
+CopyPaths:
+  - en-US
+Encoding: UTF8
+VersionedOutputDirectory: true
+
+ModuleBuildTasks:
+  Sampler:
+    - '*.build.Sampler.ib.tasks'
+  Sampler.GitHubTasks:
+    - '*.ib.tasks'
+
+TaskHeader: |
+  param($Path)
+  ""
+  "=" * 79
+  Write-Build Cyan "`t`t`t$($Task.Name.replace("_"," ").ToUpper())"
+  Write-Build DarkGray  "$(Get-BuildSynopsis $Task)"
+  "-" * 79
+  Write-Build DarkGray "  $Path"
+  Write-Build DarkGray "  $($Task.InvocationInfo.ScriptName):$($Task.InvocationInfo.ScriptLineNumber)"
+  ""
+
+####################################################
+#       Sampler Pipeline Configuration             #
+####################################################
+# Defining 'Workflows' (suite of InvokeBuild tasks) to be run using their alias
+BuildWorkflow:
+  '.': # "." is the default Invoke-Build workflow. It is called when no -Tasks is specified to the build.ps1
+    - build
+    - test
+
+  build:
+    - Clean
+    - Build_Module_ModuleBuilder
+    - Build_NestedModules_ModuleBuilder
+    - Create_changelog_release_output
+
+
+  pack:
+    - build
+    - package_module_nupkg
+
+  test:
+    - Pester_Tests_Stop_On_Fail
+    - Pester_if_Code_Coverage_Under_Threshold
+
+  publish:
+    - publish_module_to_gallery
+    - Publish_Release_To_GitHub
+    - Publish_GitHub_Wiki_Content
+    - Create_ChangeLog_GitHub_PR
+
+####################################################
+#       PESTER  Configuration                      #
+####################################################
+
+Pester:
+  OutputFormat: NUnitXML
+  ExcludeFromCodeCoverage:
+  Script:
+  - tests/QA
+  - tests/Unit
+  Tag:
+  CodeCoverageThreshold: 30
+

@@ -1,0 +1,26 @@
+TOPIC
+    about_PSXml
+
+SHORT DESCRIPTION
+    Commands to help use XML in PowerShell.
+
+LONG DESCRIPTION
+    Commands to help use XML in PowerShell.
+
+EXAMPLES
+    PS C:\> Get-Command -Module PSXml
+
+NOTE:
+    Thank you to all those who contributed to this module, by writing code, sharing opinions,
+    and provided feedback.
+
+TROUBLESHOOTING NOTE:
+    Go to the Github repository for read about issues, submit a new issue, and read
+    about new releases. https://github.com/viscalyx/PSXml
+
+SEE ALSO
+  - https://github.com/viscalyx/PSXml
+
+KEYWORDS
+      XML
+
