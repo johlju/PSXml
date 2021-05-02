@@ -19,13 +19,13 @@ Describe 'Format-Xml' {
     }
 
     It 'Should format the XML without indentation' {
-        $result = Sampler\Format-Xml -XmlDocument $mockXmlDocument
+        $result = Format-Xml -XmlDocument $mockXmlDocument
 
         $result | Should -Be $mockXmlDocument
     }
 
     It 'Should format the XML with indentation' {
-        $result = Sampler\Format-Xml -XmlDocument $mockXmlDocument -Indented
+        $result = Format-Xml -XmlDocument $mockXmlDocument -Indented
 
         $mockExpectedResult = @"
 <?xml version="1.0" encoding="utf-16" standalone="no"?>

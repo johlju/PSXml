@@ -21,7 +21,7 @@ Describe 'Out-Xml' {
     It 'Should write a file with the correct content and correct encoding' {
         $mockPath = Join-Path -Path $TestDrive -ChildPath 'mockOutput.xml'
 
-        $result = Sampler\Out-Xml -XmlDocument $mockXmlDocument -Path $mockPath
+        $result = Out-Xml -XmlDocument $mockXmlDocument -Path $mockPath
 
         $contentsInFile = Get-Content -Path $mockPath -Raw
 
