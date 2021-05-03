@@ -2,9 +2,9 @@
 
 Commands to help use XML in PowerShell
 
-[![Build Status](https://dev.azure.com/viscalyx/PSXml/_apis/build/status/viscalyx.PSXml?branchName=main)](https://dev.azure.com/viscalyx/PSXml/_build/latest?definitionId=11&branchName=main)
-![Azure DevOps coverage (branch)](https://img.shields.io/azure-devops/coverage/viscalyx/PSXml/11/main)
-[![Azure DevOps tests](https://img.shields.io/azure-devops/tests/viscalyx/PSXml/11/main)](https://viscalyx.visualstudio.com/PSXml/_test/analytics?definitionId=11&contextType=build)
+[![Build Status](https://dev.azure.com/viscalyx/PSXml/_apis/build/status/viscalyx.PSXml?branchName=main)](https://dev.azure.com/viscalyx/PSXml/_build/latest?definitionId=27&branchName=main)
+![Azure DevOps coverage (branch)](https://img.shields.io/azure-devops/coverage/viscalyx/PSXml/27/main)
+[![Azure DevOps tests](https://img.shields.io/azure-devops/tests/viscalyx/PSXml/27/main)](https://viscalyx.visualstudio.com/PSXml/_test/analytics?definitionId=27&contextType=build)
 [![PowerShell Gallery (with prereleases)](https://img.shields.io/powershellgallery/vpre/PSXml?label=PSXml%20Preview)](https://www.powershellgallery.com/packages/PSXml/)
 [![PowerShell Gallery](https://img.shields.io/powershellgallery/v/PSXml?label=PSXml)](https://www.powershellgallery.com/packages/PSXml/)
 
