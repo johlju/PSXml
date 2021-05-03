@@ -5,6 +5,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Fix module manifest.
+
+## [0.2.0] - 2021-05-03
+
 ### Added
 
 - Public command `Format-Xml`.
